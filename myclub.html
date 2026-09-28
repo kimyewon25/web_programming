@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<head>
+    
+    <title> TheMaraudersMap </title>
+    <link rel="icon" type="image/x-icon" 
+        href="/images/Hogwarts_Mark.png">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+
+    <style>
+        /* 전체 영역*/
+        table, th, td {
+            border:1px solid black;
+        }
+
+        /* 헤더 영역 */
+        header{
+            display:flex;
+            gap: 40px;
+            margin-bottom: 10px;
+            align-items: center;
+            line-height: 0.8;
+        }
+
+        nav{
+            position: sticky;
+            top:0px;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            background-color: #FFF;          
+            display:flex;
+            gap:10px;
+            justify-content: center;
+            z-index:999;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: #000;
+            padding: 10px;
+            transition: 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
+
+        .header-image img{
+            width: 120px;
+            height: 120px;
+        }
+
+        /* 아티클 영역 */
+        article{
+            margin-bottom: 60px;
+        }
+
+        .about-contents-aside {
+            width: 300px;
+            height: 200px;
+            margin-left: 15px;
+            float: right;
+            background-color: rgba(201, 172, 133, 0.786);
+            font-family: cursive;
+            color: rgb(25, 137, 25);
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .about-contents-aside img {
+            width:100px;
+            height:100px;
+            position:absolute;
+            transition: 0.5s;
+        }
+        .about-contents-aside:hover img {
+            opacity: 0;
+        }
+
+        .about-contents-aside-2 {
+            width: 300px;
+            height: 500px;
+            margin-top:30px;
+            margin-left: 15px;
+            float: right;
+            clear: right;
+            background-color: rgb(141, 175, 141);
+            padding-top: 20px;
+
+            b;
+            font-family: cursive;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            /* justify-content: center; */
+        }
+
+        #activities video{
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .footer-header{
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
+
+        /* footer */
+        .footer-contents{
+            display: flex;
+            gap: 40px;
+            font-size: 12px;
+        }
+
+
+        .footer-contents-image-img{
+           width:100px;
+           height:100px;
+        }
+
+        .footer-contents-sitemap-texts{
+            display: flex;
+            gap: 8px;
+        }
+        .footer-contents-sitemap-texts a{
+            font-size: 13px;
+            text-decoration: none;
+            color: rgba(0,0,0,0.6);
+        }
+        .footer-contents-sitemap-texts a:hover{
+            text-decoration: underline;
+            color: rgb(0,0,0);
+        }
+
+        .footer-contents-sitemap > div{
+            display:flex;
+            justify-content: space-between;
+            margin-top: -12px;
+        }
+
+        .footer-contents-sitemap-top a{
+            text-decoration: none;
+        }
+        .footer-contents-sitemap-top a:hover{
+            text-decoration: underline;
+        }
+        </style>
+</head>
+
+<body id="container">ㄴ
+    <header>
+        <div class="header-image">
+            <a href="https://www.hufs.ac.kr/hufs/index.do" target="_self">
+                <img src="images/Hogwarts_Mark.png">
+            </a>
+        </div>
+
+        <div class="header-conents"> 
+            <h1> The Marauders Map </h1>
+
+            <h4> 
+                For everyone who once dreamed of receiving a Hogwarts admission letter 
+            </h4>
+            <h5>호그와트 입학통지서를 받고싶었던 여러분에게</h5>
+        </div>
+    </header> 
+    
+    <nav>
+        <a href="#about">About our Club</a>
+        <a href="#activities">Activities & Events</a>
+        <a href="#benefits">Member Benefits</a>
+        <a href="#rules">Rules & Fun Facts</a>
+        <a href="#apply">Membership Application</a>
+    </nav>
+
+    <!-- About our club -->
+    <article id="about">
+        <h2> About our club </h1>
+
+        <div class="about-contents">
+            <aside class="about-contents-aside">
+                <img src="https://i.pinimg.com/736x/11/ca/d8/11cad87e8dc8ecdc6c931458e4d74ecb.jpg"
+                    style="width:300px;height:200px;">
+                <div class="aside-content">
+                    <p>
+                        Dear Hankuk University <br> 
+                        of Foreign Studies <br>
+                    </p>
+
+                    <br>
+                    <br>
+
+                    <p>
+                        Yours Sincerely <br>
+                        Hogwarts School of <br>
+                        Witchcraft and Wizardry
+                    </p>
+                </div>
+                    
+            </aside>
+            <aside class="about-contents-aside-2">
+                <div>
+                    Club Rules & Fun Facts
+                </div>
+            </aside>
+
+            <div class="about-contents-texts">
+                <div>
+                    <h4>background</h4>
+                    <p>
+                    해리포터 원서와 영화를 보면서 자라온 사람들은 한번쯤 이런 상상을 해본 적이 있을것입니다.<br>
+                    "아, 나한테는 호그와트 입학통지서 안 날아오나..?"<br>
+                    이루어질 수 없는 것임을 알면서도, 어느 날 아침 부엉이가 호그와트 입학통지서를 부리에 물고 찾아와주길 바라는 그런 상상 말입니다.<br>
+                    </p>
+                </div>
+
+                <div>
+                    <h4>history</h4>
+                    <p>
+                    이 동아리는 닿을 수 없었던 어릴 적 행복했던 상상을 현실에서 즐기고자 만들어진 대학생 전용 Harry Potter 덕질 동아리 입니다.<br>
+                    2018년에 신설된 이 동아리는 한 학기도 빠짐없이 활발한 활동을 이어오고 있으며,<br>
+                    해리포터를 좋아하는 사람들과 함께 모여 영화를 감상하고, 서로 이야기를 나누며 우리만의 호그와트를 세워왔습니다.<br>
+                    2023년부터는 다른 대학과도 연계하여 해리포터 관련 교류전을 펼치는 등 활발한 활동을 이어오고 있습니다.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>purpose</h4>
+                    <p>마법을 직접 배울 수는 없지만, 이 동아리를 통해 마법같은 시간을 보내고 추억을 쌓을 수 있을 것입니다.<br>
+                    영화 속에서만 가능해보였던 기숙사 배정, 무도회, 트리위저드 토너먼트까지.<br>
+                    꿈꿔왔던 활동들을  The Marauders Map 동아리에서 경험해보고 싶지 않나요?<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+    
+    <!-- Club Activities & Events -->
+    <article id="activities">
+        <h2> Club Activities & Events </h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>활동</th>
+                    <th>분류</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sorting Seremony</td>
+                    <td>기숙사 배정식</td>
+                    <td>각자의 취향과 성격에 따라 기숙사가 정해집니다.</td>
+                </tr>
+                <tr>
+                    <td>Triwizard</td>
+                    <td>대회</td>
+                    <td>타대학 동아리와 연합하여 체육 대회, 퀴즈 등을 실시합니다.</td>
+                </tr>
+                <tr>
+                    <td>House Cup Award</td>
+                    <td>대회</td>
+                    <td>기숙사끼리 서로 경쟁하여 최종 우승팀이 House Cup을 얻게 됩니다.</td>
+                </tr>
+                <tr>
+                    <td>Quidditch</td>
+                    <td>대회</td>
+                    <td>기숙사 대항 구기종목 대회를 실시합니다.</td>
+                </tr>
+                <tr>
+                    <td>Fall Festival</td>
+                    <td>축제</td>
+                    <td>가을 축제, butter beer과 함께 영화 상영회, 주점 등을 즐겨보세요.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <video controls autoplay muted loop>
+            <source src="images/harrypotter.mp4" type="video/mp4"/>
+        </video>
+    </article>
+
+
+    <!-- Member Benefits -->
+     <article id="benefits">
+        <div>
+            <h2> Member Benefits </h2>
+            <p>
+                The Marauders Map 동아리에 가입하면 얻는 혜택은 다음과 같습니다.
+            </p>
+        </div>
+     </article>
+
+
+
+    <!-- Membership Application -->
+    <articel id="apply">
+        <div>
+            <h2> Membership Application </h2>
+                <form>
+                    <label for="fname"> Name: </label> <br>
+                    <input type="text" id="fname" name="fname" maxlength="20" size="20"> <br>
+
+                    <label for="fmail"> Email: </label> <br>
+                    <input type="email" id="fmail" name="famil" maxlength="20" size="20"> <br>
+
+                    <label for="ftel"> Tel: </label> <br>
+                    <input type="tel" id="ftel" name="ftel" maxlength="20" size="20"> <br>
+
+                    <label for="fmajor"> Major: </label> <br>
+                    <input list="major" id="fmajor" name="fmajor">
+                    <datalist id="major">
+                        <option value="ELLT"></option>
+                        <option value="컴퓨터공학부"></option>
+                        <option value="정보통신공학과"></option>
+                        <option value="반도체전자공학부"></option>
+                        <option value="산업경영공학과"></option>
+                    </datalist>
+                    <br>
+
+
+                    <label for="fdate"> 면접 가능 일자: </label> <br>
+                    <input type="date" id="fdate" name="fdate">
+                    <br>
+
+                    <label for="ftime"> 면접 가능 시간: </label> <br>
+                    <input type="time" id="ftime" name="ftime">
+                    <br>
+
+                    <label for="fmessage"> 자기소개 및 지원동기: </label> <br>
+                    <textarea id="message" name="fname" rows="7" cols="50"
+                        placeholder="자기소개 및 지원동기를 써주세요."></textarea> <br>
+
+                    <label for="fhouse1"> 1지망 기숙사: </label> <br>
+                    <select id="fhouse1" name="fhouse1">
+                        <option value="Gryffindor"> Gryffindor </option>
+                        <option value="Slytherin"> Slytherin </option>
+                        <option value="Hufflepuff"> Hufflepuff </option>
+                        <option value="Ravenclaw"> Ravenclaw </option>
+                    </select>
+                    <br>
+
+                    <label for="fhouse2"> 2지망 기숙사: </label> <br>
+                    <select id="fhouse2" name="fhouse2">
+                        <option value="Gryffindor"> Gryffindor </option>
+                        <option value="Slytherin"> Slytherin </option>
+                        <option value="Hufflepuff"> Hufflepuff </option>
+                        <option value="Ravenclaw"> Ravenclaw </option>
+                    </select>
+                    <br>
+
+                    <input type="submit" value="Submit Application"><br>
+                    <input type="reset" value="Reset">
+
+                    
+                    
+                </select>
+            </form>
+        </div> 
+
+
+    </articel>
+
+
+    <hr>
+
+
+
+
+
+
+    <footer>
+
+        <div class="footer-header">
+            <p>
+                Author: Yewon Kim, ELLT, HUFS.
+            </p>
+        </div>
+ 
+
+        <div class="footer-contents">
+            <div class="footer-contents-text">
+                <p>
+                    글로벌캠퍼스17035 경기도용인시처인구<br>
+                    모현읍외대로81 한국외국어대학교<br>
+                    글로벌캠퍼스(공학관205호)
+                </p>
+
+                <p>
+                    TEL. 001-3483-1336 | 
+                    <a href="mailto:amy20060711@gmail.com">
+                        Email: amy20060711@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    Copyright &copy;Yewon Kim of HUFS, ELLT
+                    <br>
+                    All Rights Reserved.
+                </p>
+            </div>
+
+            <div class="footer-contents-image">
+                <a href="https://www.hufs.ac.kr/hufs/index.do" target="_self">
+                    <img src="images/Hankuk_university.jpg"" class="footer-contents-image-img">
+                </a>
+            </div>
+        </div>
+
+        
+    <div class="footer-contents-sitemap">
+        <h4>Sitemap</h3>
+
+        <div>
+            <div class="footer-contents-sitemap-texts">
+                <a href="#about">About our Club</a><br>
+                <a href="#activities">Activities & Events</a><br>
+                <a href="#benefits">Member Benefits</a><br>
+                <a href="#rules">Rules & Fun Facts</a><br>
+                <a href="#apply">Membership Application</a>
+            </div>
+
+            <div class="footer-contents-sitemap-top">
+                <a href="#container">Back to Top</a>
+            </div>
+        </div>
+
+    </div>
+    </footer>
+
+</body>
